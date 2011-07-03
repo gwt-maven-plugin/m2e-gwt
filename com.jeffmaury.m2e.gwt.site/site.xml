@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/com.jeffmaury.m2e.gwt.feature_1.0.0.qualifier.jar" id="com.jeffmaury.m2e.gwt.feature" version="1.0.0.qualifier">
+      <category name="com.jeffmaury.m2e.gwt"/>
+   </feature>
+   <category-def name="com.jeffmaury.m2e.gwt" label="GWT Configuration for M2Eclipse"/>
+</site>
