@@ -6,7 +6,9 @@
       provider-name="jeffmaury.com">
 
    <description>
-      Feature to automatically configure the Eclipse PMD plugin with configuration derived from the configuration of the various goals of the gwt-maven-plugin.
+      Feature to automatically configure the Eclipse Java plugin with
+configuration derived from the configuration of the various goals
+of the gwt-maven-plugin.
    </description>
 
    <copyright>
@@ -190,7 +192,6 @@
       of your accepting any such warranty or additional liability.
 
    END OF TERMS AND CONDITIONS
-      
    </license>
 
    <plugin
