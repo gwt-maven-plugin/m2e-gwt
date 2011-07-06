@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+  <!-- Inherit our applications main module.                      -->
+  <inherits name='com.jeffmaury.m2e.gwt.tests.Project002'/>
+
+  <!-- Specify the path to any remote services.                   -->
+  <servlet path="/Project002/greet" class="com.jeffmaury.m2e.gwt.tests.server.GreetingServiceImpl" />
+
+</module>

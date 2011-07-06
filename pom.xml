@@ -15,6 +15,7 @@
   </properties>
   <modules>
     <module>com.jeffmaury.m2e.gwt</module>
+    <module>com.jeffmaury.m2e.gwt.tests</module>
     <module>com.jeffmaury.m2e.gwt.feature</module>
     <module>com.jeffmaury.m2e.gwt.site</module>
   </modules>
@@ -23,6 +24,11 @@
       <id>indigo</id>
       <layout>p2</layout>
       <url>http://download.eclipse.org/releases/indigo</url>
+    </repository>
+    <repository>
+      <id>m2e</id>
+      <layout>p2</layout>
+      <url>http://download.eclipse.org/technology/m2e/releases/1.0</url>
     </repository>
   </repositories>
   <build>
