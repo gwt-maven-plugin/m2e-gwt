@@ -1,4 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+/*******************************************************************************
+* Copyright 2011 Jeff MAURY
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+******************************************************************************/
+-->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.jeffmaury.m2e-gwt</groupId>
@@ -6,10 +23,19 @@
   <version>1.0.0-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>M2Eclipse extensions for Maven GWT plugin</name>
+  <url>https://github.com/gwt-maven-plugin/m2e-gwt</url>
   <scm>
-    <connection>scm:git:git://github.com/jeffmaury/m2e-gwt.git</connection>
-    <url>scm:git:git://github.com/jeffmaury/m2e-gwt.git</url>
+    <connection>scm:git:git://github.com/gwt-maven-plugin/m2e-gwt.git</connection>
+    <developerConnection>scm:git:ssh:git@github.com/gwt-maven-plugin/m2e-gwt.git</developerConnection>
+    <url>https://github.com/gwt-maven-plugin/m2e-gwt</url>
   </scm>
+  <developers>
+    <developer>
+      <id>jeffmaury</id>
+      <name>Jeff MAURY</name>
+      <email>jeffmaury@jeffmaury.com</email>
+    </developer>
+  </developers>
   <properties>
     <tycho-version>0.12.0</tycho-version>
   </properties>
@@ -98,6 +124,15 @@
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-resources-plugin</artifactId>
           <version>2.4.3</version>
+        </plugin>
+        <plugin>
+          <groupId>org.codehaus.groovy.maven</groupId>
+          <artifactId>gmaven-plugin</artifactId>
+          <version>1.0</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-scm-plugin</artifactId>
+          <version>1.5</version>
         </plugin>
       </plugins>
     </pluginManagement>

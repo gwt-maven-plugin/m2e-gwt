@@ -15,6 +15,10 @@
 ******************************************************************************/
 package com.jeffmaury.m2e.gwt;
 
+import org.apache.maven.plugin.MojoExecution;
+import org.eclipse.m2e.core.lifecyclemapping.model.IPluginExecutionMetadata;
+import org.eclipse.m2e.core.project.IMavenProjectFacade;
+import org.eclipse.m2e.core.project.configurator.AbstractBuildParticipant;
 import org.eclipse.m2e.jdt.AbstractJavaProjectConfigurator;
 
 /**
@@ -23,6 +27,12 @@ import org.eclipse.m2e.jdt.AbstractJavaProjectConfigurator;
  */
 public class GWTProjectConfigurator extends AbstractJavaProjectConfigurator {
 
+  /**
+   * Name of the target generation directory parameter for the Maven GWT goals
+   * (i18n, css, generateAsync) that generates Java files.
+   */
+  public static final String GENERATE_DIRECTORY_PARAMETER_NAME = "generateDirectory";
+  
 	/**
 	 * 
 	 */
@@ -34,7 +44,18 @@ public class GWTProjectConfigurator extends AbstractJavaProjectConfigurator {
    */
   @Override
   protected String getOutputFolderParameterName() {
-    return "generateDirectory";
+    return GENERATE_DIRECTORY_PARAMETER_NAME;
   }
 
+  /* (non-Javadoc)
+   * @see org.eclipse.m2e.core.project.configurator.AbstractProjectConfigurator#getBuildParticipant(org.eclipse.m2e.core.project.IMavenProjectFacade, org.apache.maven.plugin.MojoExecution, org.eclipse.m2e.core.lifecyclemapping.model.IPluginExecutionMetadata)
+   */
+  @Override
+  public AbstractBuildParticipant getBuildParticipant(
+      IMavenProjectFacade projectFacade, MojoExecution execution,
+      IPluginExecutionMetadata executionMetadata) {
+    return new GWTBuildParticipant(execution);
+  }
+
+     
 }
