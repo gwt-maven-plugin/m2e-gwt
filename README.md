@@ -1,7 +1,7 @@
-### GWT Maven plugin M2Eclipse extension
+### GWT Maven plugin - m2e extension
 
-This project is a M2Eclipse configurator for the Maven integration for Eclipse (M2Eclipse).
-When a Maven project using the Maven GWT plugin is loaded inside Eclipse with the Maven inegration
+This project is a m2e (Maven integration for Eclipse) configurator for the [Maven GWT Plugin](http://mojo.codehaus.org/gwt-maven-plugin/).
+When a Maven project using the Maven GWT plugin is loaded inside Eclipse with the Maven integration
 for Eclipse, it will extract configuration information from the Maven GWT plugin and report it inside
 Eclipse.
 
@@ -12,10 +12,7 @@ The first version, 1.0.0, is soon to be published, will configure the generate d
 and css goals as source folders inside Eclipse.
 This extension will also participate into the Eclipse build lifecycle: the i18n and css goals will be launched as soon
 as a file in the Maven resource folders (src/main/resources by default) has been modified. The generateAsync will be
-launched as soon as a file in the Maven resource folders (src/main/resources by default) has been modified.
-Please not that this 1.0.0 has no relation with the Google Eclipse tooling (GPE) so the Eclipse project will not have
-the Google various natures and settings.
+launched as soon as a file in the Maven source folders (src/main/java by default) has been modified.
 
-# 1.1.0
-This second version will bring integration with the Google Eclipse tooling (GPE) if this latter has been installed on
-your Eclipse.
+Google Plugin for Eclipse (version 3.1.0.v201208080120-rel-r37 and later) runs maven managed GWT projects out of the box. 
+Projects have Google various natures and settings; client-side code change is applied after browser refresh, server-side change requires DevMode reload.
